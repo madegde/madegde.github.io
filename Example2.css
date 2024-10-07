@@ -37,7 +37,7 @@ p {
 	font-size: 18px;
 	margin: 5px 5px;
 	line-height: 22.4px;
-	color: #323232;
+	color: #0d1b2a;
 }
 
 /* Format my heading */
@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
 	font-family: "Cabin", sans-serif;
 	font-variant: small-caps;
 	font-size: 60px;
-	color: #320064;
+	color: #415a77;
 	font-weight: 900;
 	margin: 0px 0px 30px 0px;
 }
