@@ -36,7 +36,7 @@
       "field": "date",
       "type": "temporal",
       "axis": {
-        "title": "",
+        "title": "Date",
         "titleColor": "#122B39",
         "grid": false
       }
@@ -45,10 +45,14 @@
       "field": "value",
       "type": "quantitative",
       "axis": {
-        "title": "",
+        "title": "Unemployment Rate (%)",
         "titleColor": "#122B39",
         "grid": false
       }
-    }
+    },
+    "tooltip": [
+      {"field": "date", "type": "temporal", "title": "Date"},
+      {"field": "value", "type": "quantitative", "title": "Unemployment Rate (%)"}
+    ]
   }
 }
