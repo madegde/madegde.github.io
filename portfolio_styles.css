@@ -67,8 +67,8 @@ img {
 }
 
 /* Chart Styling */
-/*figure {*/
-  /*display: block; /* Ensures figures are displayed */
-  /*margin: 20px auto; /* Center figures with margin */
-  /*width: 100%; /* Full width for responsive charts */
-/*}*/
+figure {
+  display: block; /* Ensures figures are displayed */
+  margin: 20px auto; /* Center figures with margin */
+  width: 100%; /* Full width for responsive charts */
+}
