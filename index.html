@@ -46,7 +46,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-<!--     <a href="#home" class="w3-bar-item w3-button"><b>Made Gde</b></a> -->
+    <a href="#home" class="w3-bar-item w3-button"><b>Made Gde</b></a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
@@ -58,8 +58,8 @@
 </div>
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1080px;" id="home">
-  <img class="w3-image" src="https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg" alt="lotus" width="1080" height="200">
+<header class="w3-display-container w3-content w3-wide" style="max-width:2560px;" id="home">
+  <img class="w3-image" src="https://images.pexels.com/photos/1179863/pexels-photo-1179863.jpeg" alt="lotus" width="2560" height="200">
   <div class="w3-display-left w3-margin-top w3-centre">
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-hide-small w3-text-grey"><b>Made</b></span> <span class="w3-padding w3-black w3-opacity-min">Gde</span></h1>
   </div>
@@ -80,7 +80,7 @@
 <!--     </h3> --> 
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="w3-content w3-padding" style="max-width:1980px">
     
 <!-- Project Section -->
   <div class="w3-container w3-padding-32" id="projects">
@@ -91,23 +91,22 @@
   <div class="w3-container w3-padding-32" id="portfolio">
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Portfolio</h2>
   </div>
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
-
+    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->  
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
         <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
-
+        <section>
+            <div class="chart-description">
+                <h2>Section 1: A basic chart</h2>
+                <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                    We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
+                    As a first example, we're using a basic chart from our repo.
+                </p>
+            </div>
+            <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        </section>
+    
         <section>
             <div class="chart-description">
                 <h2>Section 2: Another basic chart</h2>
@@ -124,33 +123,30 @@
             <figure id="Location3"></figure>
         </section>
 
-    <section>
+        <section>
             <div class="chart-description">
                 <h2>Section 4: Pint prices in UK </h2>
                 <p>This section showcases pint prices across UK</p>
             </div>
             <figure id="Location4"></figure>
         </section>
+
     <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
         // This is a comment in JavaScript - it's a different language to HTML and CSS
 
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        let figure_2_spec = "visualization_unemp.json";  // Update this path if necessary
-        let figure_3_spec = "wk1_chart2.json"; // Ensure this path is correct
-        let figure_4_spec = "visualization.vl.json"; // Ensure this path is correct
+        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json";
+        let figure_2_spec = "visualization_unemp.json";
+        let figure_3_spec = "wk1_chart2.json";
+        let figure_4_spec = "visualization.vl.json";
         
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
 
+        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
         vegaEmbed('#Location2', figure_2_spec).catch(console.error);
         vegaEmbed('#Location3', figure_3_spec).catch(console.error);
         vegaEmbed('#Location4', figure_4_spec).catch(console.error);
-
 
     </script>
 
