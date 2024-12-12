@@ -131,6 +131,30 @@
             <figure id="Location4"></figure>
         </section>
 
+        <section>
+            <div class="chart-description">
+                <h3>Section 5: Gun deaths and income </h3>
+                <p>This section showcases Gun deaths and income in US</p>
+            </div>
+            <figure id="Location5"></figure>
+        </section>
+
+        <section>
+            <div class="chart-description">
+                <h3>Section 6: Millions without work </h3>
+                <p>This section showcases Millions without work</p>
+            </div>
+            <figure id="Location6"></figure>
+        </section>
+
+        <section>
+            <div class="chart-description">
+                <h3>Section 7: Where do our elderly live </h3>
+                <p>This section showcases Where do our elderly live</p>
+            </div>
+            <figure id="Location7"></figure>
+        </section>
+    
     <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
         // This is a comment in JavaScript - it's a different language to HTML and CSS
@@ -139,6 +163,9 @@
         let figure_2_spec = "visualization_unemp.json";
         let figure_3_spec = "wk1_chart2.json";
         let figure_4_spec = "visualization.vl.json";
+        let figure_5_spec = "Gun deaths and income.json";
+        let figure_6_spec = "Millions without work.json";
+        let figure_7_spec = "Where do our elderly live.json";
         
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
@@ -147,6 +174,9 @@
         vegaEmbed('#Location2', figure_2_spec).catch(console.error);
         vegaEmbed('#Location3', figure_3_spec).catch(console.error);
         vegaEmbed('#Location4', figure_4_spec).catch(console.error);
+        vegaEmbed('#Location5', figure_5_spec).catch(console.error);
+        vegaEmbed('#Location6', figure_6_spec).catch(console.error);
+        vegaEmbed('#Location6', figure_7_spec).catch(console.error);
 
     </script>
 
