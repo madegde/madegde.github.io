@@ -111,6 +111,13 @@
             </div>
             <figure id="Location7"></figure>
         </section>
+    <section>
+            <div class="chart-description">
+                <h3>Section 8: GDP per hour </h3>
+                <p>This section showcases GDP per hour</p>
+            </div>
+            <figure id="Location8"></figure>
+        </section>
     
     <!-- This is a script, it's a way to run JavaScript code on the page -->
     <script>
@@ -123,6 +130,7 @@
         let figure_5_spec = "Gun deaths and income.json";
         let figure_6_spec = "Millions without work.json";
         let figure_7_spec = "Where do our elderly live.json";
+        let figure_8_spec = "GDP per hour.json";
         
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
@@ -134,6 +142,7 @@
         vegaEmbed('#Location5', figure_5_spec).catch(console.error);
         vegaEmbed('#Location6', figure_6_spec).catch(console.error);
         vegaEmbed('#Location7', figure_7_spec).catch(console.error);
+        vegaEmbed('#Location8', figure_8_spec).catch(console.error);
 
     </script>
 
