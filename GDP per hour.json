@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/refs/heads/main/Data/ONS_UK_productivity_index.csv"
+  },
+  "width": 450,
+  "height": 300,
+  "layer": [
+    {
+      "data": {"values": [{"date": "2008-04-01"}]},
+      "mark": {"type": "rule", "color": "blue"},
+      "encoding": {"x": {"field": "date", "type": "temporal"}}
+    },
+    {
+      "mark": {"type": "line", "color": "darkred"},
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "axis": {"grid": false},
+          "title": ""
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": {
+            "gridOpacity": 0.4,
+            "title": "GDP per hour, Index 2008Q2=100",
+            "titleAngle": 0,
+            "titleY": -5,
+            "titleAlign": "left",
+            "titleX": 0,
+            "titleFontWeight": 400
+          }
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "strokeDash": [3, 2], "color": "dimgray"},
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "y": {"field": "trend", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2008-04-01",
+            "label": "Global Financial Crisis",
+            "value": 155
+          }
+        ]
+      },
+      "mark": {"type": "text", "color": "red", "align": "center", "dy": -20},
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "text": {"field": "label"},
+        "y": {"field": "value", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2023-07-01",
+            "label": "2023 Q3",
+            "quarter": "Q3",
+            "value": 106.29514963880288,
+            "trend": 140.4229319212009,
+            "y_min": 108.29514963880288,
+            "y_max": 138.4229319212009,
+            "y_mid": 123.35904078000189,
+            "text_label": "Productivity gap"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "#179fdb", "strokeWidth": 0.6},
+          "encoding": {
+            "x": {"field": "date", "type": "temporal"},
+            "y": {"field": "y_min", "type": "quantitative"},
+            "y2": {"field": "y_max"}
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "#179fdb",
+            "shape": "triangle-up",
+            "size": 40
+          },
+          "encoding": {
+            "x": {"field": "date", "type": "temporal"},
+            "y": {"field": "y_max", "type": "quantitative"}
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "color": "#179fdb",
+            "shape": "triangle-down",
+            "size": 40
+          },
+          "encoding": {
+            "x": {"field": "date", "type": "temporal"},
+            "y": {"field": "y_min", "type": "quantitative"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "font": "Circular Std",
+            "color": "#179fdb",
+            "dx": 5
+          },
+          "encoding": {
+            "text": {"field": "text_label"},
+            "x": {"field": "date", "type": "temporal"},
+            "y": {"field": "y_mid", "type": "quantitative"}
+          }
+        }
+      ]
+    }
+  ],
+  "view": {"stroke": "aquamarine"},
+  "config": {}
+}
