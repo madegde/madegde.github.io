@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1080,
-  "height": 500,
+  "height": 400,
   "title": {
     "text": "Indonesia's Economic Policy Uncertainty Monthly Index",
     "subtitle": [
