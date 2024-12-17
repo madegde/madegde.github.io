@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": {
+    "text": "Indonesia's Economic Policy Uncertainty Monthly Index",
+    "subtitle": [
+      "Economic Policy Uncertainty Index for Indonesia that runs from July 1998 to November 2024.",
+      "Source:Author",
+      ""
+    ]
+  },
+  "description": "Indonesia's Economic Policy Uncertainty Index.",
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/madegde/madegde.github.io/refs/heads/main/epu_monthly.csv"
+      },
+      "mark": {"type": "line"},
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "temporal",
+          "axis": {"format": "%b %Y"},
+          "title": "Time"
+        },
+        "y": {
+          "field": "epu_index",
+          "type": "quantitative",
+          "title": "EPU Index"
+        },
+        "tooltip": [
+          {"field": "month", "title": "Month", "formatType": "time"},
+          {"field": "epu_index", "title": "EPU", "format": ".2f"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
