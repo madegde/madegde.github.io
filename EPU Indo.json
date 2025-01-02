@@ -5,7 +5,7 @@
   "title": {
     "text": "Indonesia's Economic Policy Uncertainty Monthly Index",
     "subtitle": [
-      "Economic Policy Uncertainty Index for Indonesia that runs from August 1997 to November 2024.",
+      "Economic Policy Uncertainty Index for Indonesia that runs from October 1994 to December 2024.",
       "Source:Author",
       ""
     ]
@@ -19,19 +19,29 @@
       "mark": {"type": "line"},
       "encoding": {
         "x": {
-          "field": "month",
+          "field": "Month",
           "type": "temporal",
           "axis": {"format": "%b %Y"},
           "title": "Time"
         },
         "y": {
-          "field": "epu_index",
+          "field": "EPU_Index",
           "type": "quantitative",
           "title": "EPU Index"
         },
         "tooltip": [
-          {"field": "month", "type": "temporal", "title": "Month", "formatType": "time"},
-          {"field": "epu_index", "type": "quantitative", "title": "EPU", "format": ".2f"}
+          {
+            "field": "Month",
+            "type": "temporal",
+            "title": "Month",
+            "formatType": "time"
+          },
+          {
+            "field": "EPU_Index",
+            "type": "quantitative",
+            "title": "EPU",
+            "format": ".2f"
+          }
         ]
       }
     }
